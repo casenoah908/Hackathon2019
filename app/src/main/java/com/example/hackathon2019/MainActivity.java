@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     }
         public UserAccount[] hardcodeAccounts () {
             UserAccount account1 = new UserAccount("NoahCase","12345");
-            UserAccount account2 = new UserAccount("NoahShottler","54321");
+            UserAccount account2 = new UserAccount("NoahSchottler","54321");
             UserAccount account3 = new UserAccount("TrevorSchmidt","15243");
             UserAccount[] accounts = {account1, account2, account3};
             return accounts;
