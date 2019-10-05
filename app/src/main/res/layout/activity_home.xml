@@ -6,13 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Honey! I'm Home!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="196dp"
+        android:layout_height="58dp"
+        android:text="Intellectual"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="500dp" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="196dp"
+        android:layout_height="58dp"
+        android:text="Environmental"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="442dp" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="196dp"
+        android:layout_height="58dp"
+        android:text="Social"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="196dp"
+        android:layout_height="58dp"
+        android:text="Emotional"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="326dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="196dp"
+        android:layout_height="58dp"
+        android:text="Spiritual"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="268dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="196dp"
+        android:layout_height="58dp"
+        android:text="Occupational"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="196dp"
+        android:layout_height="58dp"
+        android:text="Physical"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="326dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Choose a Dimension of Wellness"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="90dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
