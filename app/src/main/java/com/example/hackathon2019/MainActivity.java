@@ -13,6 +13,5 @@ public class MainActivity extends AppCompatActivity {
         //wassup
         //My wassup
         //Schottler did this
-
     }
 }
