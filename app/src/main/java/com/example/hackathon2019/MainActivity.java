@@ -2,9 +2,14 @@ package com.example.hackathon2019;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +21,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
+    int accountsCount = 3;
+    UserAccount[] accounts = hardcodeAccounts();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,9 +32,12 @@ public class MainActivity extends AppCompatActivity {
         //Schottler did this
 
         //instantiate objects
-        final ArrayList<String> userNames = new ArrayList<>();
-        //instantiate views
 
+
+        //instantiate views
+        Button loginButton = findViewById(R.id.loginButton);
+        final TextView username = findViewById(R.id.usernameBox);
+        final TextView password = findViewById(R.id.passwordBox);
 
 
         /*
@@ -57,5 +67,34 @@ public class MainActivity extends AppCompatActivity {
         });
         */
 
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            //on click of login
+            public void onClick(View v) {
+                String currentUsername = username.getText().toString();
+                String currentPassword = password.getText().toString();
+                for(UserAccount account: accounts){
+                    //if user logging in is in the accounts...
+                    if((account.getUsername().equals(currentUsername))&&(account.getPassword().equals(currentPassword))){
+                        //start home activity
+                        openHomeActivity();
+                    }else{
+                        Toast.makeText(MainActivity.this,"NOPE",Toast.LENGTH_LONG);
+                    }
+                }
+            }
+        });
     }
+        public UserAccount[] hardcodeAccounts () {
+            UserAccount account1 = new UserAccount("NoahCase","12345");
+            UserAccount account2 = new UserAccount("NoahShottler","54321");
+            UserAccount account3 = new UserAccount("TrevorSchmidt","15243");
+            UserAccount[] accounts = {account1, account2, account3};
+            return accounts;
+        }
+        public void openHomeActivity(){
+            Intent intent = new Intent(this,HomeActivity.class);
+            startActivity(intent);
+        }
+
 }
