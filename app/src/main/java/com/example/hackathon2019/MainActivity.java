@@ -6,8 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -28,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        ImageView imageView = findViewById(R.id.logo);
+        Picasso.get().load("https://i.redd.it/tsf30s0b2yq31.png").into(imageView);
 
         //instantiate views
         Button loginButton = findViewById(R.id.loginButton);
