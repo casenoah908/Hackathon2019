@@ -28,11 +28,18 @@ public class HomeActivity extends AppCompatActivity {
         //physical
         physical[0] =  new Thread("Workout Strategies", "discussion", "10/5/19", account1,
                 "Hey, \nI'm wondering if anyone has good ideas for how to workout. I'm wanting to start but honestly I'm a little intimidated by it. How should I ease myself into it?\nThanks");
-        physical[1] =  new Thread("Hi guys, I've been experiencing intense muscle tension and nauseousness, wondering how I should ", "discussion", "10/5/19", account2,
-                "Hey, \n I'm wondering if anyone has good ideas for how to workout. I am stupid and haven't worked out before. Please tell me how.");
+        physical[1] =  new Thread("Muscle Tension and Nauseousness", "discussion", "10/5/19", account2,
+                "Hi guys\n Over the pass couple days I've been experiencing intense muscle tension and nauseousness, I'm not sure what to do and if it will ever stop.");
         //emotional
-        emotional[0] = new Thread("Workout Strategies", "discussion", "10/5/19", account1,
-                "Hey, I'm wondering if anyone has good ideas for how to workout. I am stupid and haven't worked out before. Please tell me how.");
+        emotional[0] = new Thread("Lost a friend", "discussion", "10/5/19", account3,
+                "I just learned that one of my friends that I met through rehab passed away. I'm taking it really hard and I'm very worried");
+        emotional[1] = new Thread("Angry over small things", "discussion", "10/5/19", account1,
+                "Hello \n Since I quit, the smallest things tick me off. I yelled at a cashier over a small inconvenience, I did go back and apologize but I can't seem to make sense of it until time passes. What should I do?");
+        //intellectual
+        intellectual[0] = new Thread("Interesting article on dopamine and the brain", "discussion", "10/5/19", account3,
+                "Hey everyone!\n I was fishing through articles and found an interesting, recent statement \"In parallel, changes in the extended amygdala result in negative emotional states that perpetuate drug taking as an attempt to temporarily alleviate them. Counterintuitively, in the addicted person, the actual drug consumption is associated with an attenuated dopamine increase in brain reward regions, which might contribute to drug-taking behavior to compensate for the difference between the magnitude of the expected reward triggered by the conditioning to drug cues and the actual experience of it. \"\nTell me if you want me to keep posting what I find :) ");
+        intellectual[0] = new Thread("", "discussion", "10/5/19", account3,
+                "");
 
 
         super.onCreate(savedInstanceState);
