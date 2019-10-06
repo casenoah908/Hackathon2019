@@ -37,14 +37,7 @@ public class MainActivity extends AppCompatActivity {
         //instantiate views
         Button loginButton = findViewById(R.id.loginButton);
 
-        //Dimension of Wellness Buttons
-        Button buttonPhysical = findViewById(R.id.buttonPhysical);
-        Button buttonOccupational = findViewById(R.id.buttonOccupational);
-        Button buttonSpiritual = findViewById(R.id.buttonSpiritual);
-        Button buttonEmotional = findViewById(R.id.buttonEmotional);
-        Button buttonSocial = findViewById(R.id.buttonSocial);
-        Button buttonEnviormental = findViewById(R.id.buttonEnviormental);
-        Button buttonIntellectual = findViewById(R.id.buttonIntellectual);
+
 
         final TextView username = findViewById(R.id.usernameBox);
         final TextView password = findViewById(R.id.passwordBox);
@@ -95,13 +88,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonEmotional.setOnClickListener(new View.OnClickListener(){
-            @Override
-            //On Click of of "Emotional Wellness" Button
-            public void onClick(View v){
-                openThreadListActivity();
-            }
-        });
+
 
     }
         public UserAccount[] hardcodeAccounts () {
@@ -117,9 +104,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
-        public void openThreadListActivity(){
-            Intent intent = new Intent(this,HomeActivity.class);
-            startActivity(intent);
-    }
+
 
 }

@@ -7,22 +7,24 @@
     tools:context=".HomeActivity">
 
     <Button
-        android:id="@+id/buttonIntellectual"
+        android:id="@+id/buttonSpiritual"
         android:layout_width="196dp"
         android:layout_height="58dp"
-        android:text="Intellectual"
+        android:text="Spiritual"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonEnviormental" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonOccupational" />
 
     <Button
-        android:id="@+id/buttonEnviormental"
+        android:id="@+id/buttonOccupational"
         android:layout_width="196dp"
         android:layout_height="58dp"
-        android:text="Environmental"
+        android:text="Occupational"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSocial" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPhysical" />
 
     <Button
         android:id="@+id/buttonSocial"
@@ -30,8 +32,52 @@
         android:layout_height="58dp"
         android:text="Social"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonEmotional" />
+
+    <Button
+        android:id="@+id/buttonEnviormental"
+        android:layout_width="196dp"
+        android:layout_height="58dp"
+        android:text="Environmental"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSocial" />
+
+    <Button
+        android:id="@+id/buttonIntellectual"
+        android:layout_width="196dp"
+        android:layout_height="58dp"
+        android:text="Intellectual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEnviormental" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="326dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="232dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Choose a Dimension of Wellness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPhysical"
+        android:layout_width="196dp"
+        android:layout_height="58dp"
+        android:text="Physical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <Button
         android:id="@+id/buttonEmotional"
@@ -43,41 +89,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSpiritual" />
 
-    <Button
-        android:id="@+id/buttonSpiritual"
-        android:layout_width="196dp"
-        android:layout_height="58dp"
-        android:text="Spiritual"
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="350dp"
+        android:layout_height="129dp"
+        android:text="Hi Noah, welcome to day 8!"
+        android:textAllCaps="false"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonOccupational" />
-
-    <Button
-        android:id="@+id/buttonOccupational"
-        android:layout_width="196dp"
-        android:layout_height="58dp"
-        android:text="Occupational"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPhysical" />
-
-    <Button
-        android:id="@+id/buttonPhysical"
-        android:layout_width="196dp"
-        android:layout_height="58dp"
-        android:text="Physical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="326dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Choose a Dimension of Wellness"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
