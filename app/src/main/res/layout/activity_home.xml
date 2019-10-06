@@ -6,99 +6,152 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <Button
-        android:id="@+id/buttonIntellectual"
-        android:layout_width="196dp"
-        android:layout_height="58dp"
-        android:text="Intellectual"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonEnviormental" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-    <Button
-        android:id="@+id/buttonOccupational"
-        android:layout_width="196dp"
-        android:layout_height="58dp"
-        android:text="Occupational"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPhysical" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".HomeActivity">
 
-    <Button
-        android:id="@+id/buttonSocial"
-        android:layout_width="196dp"
-        android:layout_height="58dp"
-        android:text="Social"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonEmotional" />
+            <Button
+                android:id="@+id/buttonOccupational"
+                android:layout_width="196dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="8dp"
+                android:background="#7200796B"
+                android:text="Occupational"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonPhysical" />
 
-    <Button
-        android:id="@+id/buttonSpiritual"
-        android:layout_width="196dp"
-        android:layout_height="58dp"
-        android:text="Spiritual"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonOccupational" />
+            <Button
+                android:id="@+id/buttonIntellectual"
+                android:layout_width="196dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                android:background="#7200796B"
+                android:text="Intellectual"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonEnviormental" />
 
-    <Button
-        android:id="@+id/buttonEmotional"
-        android:layout_width="196dp"
-        android:layout_height="58dp"
-        android:text="Emotional"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSpiritual" />
+            <Button
+                android:id="@+id/buttonPhysical"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="196dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="#7200796B"
+                android:text="Physical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/buttonOccupational"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <Button
-        android:id="@+id/buttonEnviormental"
-        android:layout_width="196dp"
-        android:layout_height="58dp"
-        android:text="Environmental"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSocial" />
+            <Button
+                android:id="@+id/buttonSpiritual"
+                android:layout_width="196dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="8dp"
+                android:background="#7200796B"
+                android:text="Spiritual"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonOccupational" />
 
-    <Button
-        android:id="@+id/buttonPhysical"
-        android:layout_width="196dp"
-        android:layout_height="58dp"
-        android:text="Physical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            <Button
+                android:id="@+id/buttonEmotional"
+                android:layout_width="196dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="8dp"
+                android:background="#7200796B"
+                android:text="Emotional"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonSpiritual" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="351dp"
-        android:layout_height="190dp"
-        android:layout_marginTop="8dp"
-        android:text="Hi Noah, welcome to day 8!"
-        android:textAllCaps="false"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/buttonEnviormental"
+                android:layout_width="196dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="8dp"
+                android:background="#7200796B"
+                android:text="Environmental"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonSocial" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Choose a dimension to discuss"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonPhysical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            <Button
+                android:id="@+id/buttonSocial"
+                android:layout_width="196dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="8dp"
+                android:background="#7200796B"
+                android:text="Social"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonEmotional" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="351dp"
+                android:layout_height="190dp"
+                android:layout_marginTop="8dp"
+                android:text="Hi Noah, welcome to day 8!"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="What will you discuss today?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/buttonPhysical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
