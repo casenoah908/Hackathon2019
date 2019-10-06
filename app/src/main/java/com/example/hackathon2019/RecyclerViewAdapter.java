@@ -20,15 +20,13 @@ import java.util.ArrayList;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
 
-    private ArrayList<String> titles = new ArrayList<>();
-    private ArrayList<String> types = new ArrayList<>();
-    private ArrayList<UserAccount> users = new ArrayList<>();
-    private ArrayList<String> dates = new ArrayList<>();
 
+
+    private Thread[] dimensionThreads;
 
 
     public RecyclerViewAdapter(Thread[] dimensionThreads){
-
+        this.dimensionThreads = dimensionThreads;
     }
 
     @Override
@@ -41,9 +39,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.ViewHolder holder, int position) {
         //set info
-        holder.threadTitleAndType.setText(types.get(position)+" - "+titles.get(position));
-        holder.threadUserAndDate.setText(users.get(position).getUsername()+" "+
-                users.get(position).getDays()+" days sober"+" - "+dates.get(position));
+        holder.threadTitleAndType.setText(dimensionThreads[position].getType()+" - "+dimensionThreads[position].getTitle());
+        holder.threadUserAndDate.setText(dimensionThreads[position].getUserName()+" "+
+                dimensionThreads[position].getUserDays()+" days sober"+" - "+dimensionThreads[position].getDateTime());
 
         holder.threadItemLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +54,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return titles.size();
+        return dimensionThreads.length;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -73,6 +71,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public void openThreadActivity(){
         //Intent intent = new Intent(context,ThreadActivity.class);
+        //intent.putExtra("threads", threads);
         //context.startActivity(intent);
     }
 }

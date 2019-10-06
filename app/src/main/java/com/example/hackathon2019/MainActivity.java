@@ -104,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
             bundle.putString("password",passedAccount.getPassword());
             intent.putExtras(bundle);
             startActivity(intent);
+
+            int[] array = new int[2];
+            array[0] = 3;
         }
 
 
