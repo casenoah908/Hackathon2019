@@ -78,8 +78,8 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="350dp"
-        android:layout_height="129dp"
+        android:layout_width="351dp"
+        android:layout_height="190dp"
         android:layout_marginTop="8dp"
         android:text="Hi Noah, welcome to day 8!"
         android:textAllCaps="false"
@@ -93,7 +93,7 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Choose a dimension to discuss"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonPhysical"
