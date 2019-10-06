@@ -38,7 +38,7 @@ public class HomeActivity extends AppCompatActivity {
         //intellectual
         intellectual[0] = new Thread("Interesting article on dopamine and the brain", "discussion", "10/5/19", account3,
                 "Hey everyone!\n I was fishing through articles and found an interesting, recent statement \"In parallel, changes in the extended amygdala result in negative emotional states that perpetuate drug taking as an attempt to temporarily alleviate them. Counterintuitively, in the addicted person, the actual drug consumption is associated with an attenuated dopamine increase in brain reward regions, which might contribute to drug-taking behavior to compensate for the difference between the magnitude of the expected reward triggered by the conditioning to drug cues and the actual experience of it. \"\nTell me if you want me to keep posting what I find :) ");
-        intellectual[0] = new Thread("", "discussion", "10/5/19", account3,
+        intellectual[1] = new Thread("Good books to read?", "discussion", "10/5/19", account3,
                 "");
 
 
