@@ -13,9 +13,9 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        UserAccount account1 = new UserAccount("NoahCase","12345",25);
-        UserAccount account2 = new UserAccount("NoahSchottler","54321",52);
-        UserAccount account3 = new UserAccount("TrevorSchmidt","15243",252);
+        UserAccount account1 = new UserAccount("NoahCase","12345", "Alcoholism", 25);
+        UserAccount account2 = new UserAccount("NoahSchottler","54321","Smoking",52);
+        UserAccount account3 = new UserAccount("TrevorSchmidt","15243", "Anger Management",252);
 
         final Thread[] physical = new Thread[2];
         final Thread[] emotional = new Thread[2];
@@ -50,9 +50,10 @@ public class HomeActivity extends AppCompatActivity {
         int days = bundle.getInt("days");
         String password = bundle.getString("password");
         String name = bundle.getString("username");
+        String goal = bundle.getString("goal");
 
         TextView t = (TextView) findViewById(R.id.textView5);
-        t.setText("Welcome to day " + days + ", " + name + "!");
+        t.setText("Welcome back " + name + " to day " + days + " of battling " + goal + ".");
         //t.setTextAlignment(4);
 
         //Dimension of Wellness Buttons

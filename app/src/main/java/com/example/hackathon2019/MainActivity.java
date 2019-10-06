@@ -88,9 +88,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
         public UserAccount[] hardcodeAccounts () {
-            UserAccount account1 = new UserAccount("NoahCase","12345",25);
-            UserAccount account2 = new UserAccount("NoahSchottler","54321",52);
-            UserAccount account3 = new UserAccount("TrevorSchmidt","15243",252);
+            UserAccount account1 = new UserAccount("NoahCase","12345", "Alcoholism", 25);
+            UserAccount account2 = new UserAccount("NoahSchottler","54321", "Smoking", 52);
+            UserAccount account3 = new UserAccount("TrevorSchmidt","15243", "Anger Management", 252);
             UserAccount[] accounts = {account1, account2, account3};
             return accounts;
         }
@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
             bundle.putInt("days",passedAccount.getDays());
             bundle.putString("username",passedAccount.getUsername());
             bundle.putString("password",passedAccount.getPassword());
+            bundle.putString("goal",passedAccount.getGoal());
             intent.putExtras(bundle);
             startActivity(intent);
 
