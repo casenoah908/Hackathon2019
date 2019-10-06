@@ -25,7 +25,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Thread[] dimensionThreads;
 
 
-
     public RecyclerViewAdapter(Thread[] dimensionThreads){
         this.dimensionThreads = dimensionThreads;
     }
