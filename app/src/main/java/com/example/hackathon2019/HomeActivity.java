@@ -149,7 +149,4 @@ public class HomeActivity extends AppCompatActivity {
         intent.putExtra("thread",threads);
         startActivity(intent);
     }
-
-
-
 }
