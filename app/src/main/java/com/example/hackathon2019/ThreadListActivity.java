@@ -18,6 +18,8 @@ public class ThreadListActivity extends AppCompatActivity {
          ArrayList<UserAccount> users = new ArrayList<>();
          ArrayList<String> dates = new ArrayList<>();
 
+        // Thread[] threads = getIntent().getExtras();
+
 
     }
 }

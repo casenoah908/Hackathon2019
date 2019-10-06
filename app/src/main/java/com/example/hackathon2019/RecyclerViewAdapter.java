@@ -70,9 +70,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
-    public void openThreadActivity(){
-        //Intent intent = new Intent(context,ThreadActivity.class);
-        //intent.putExtra("threads", threads);
-        //context.startActivity(intent);
+    public void openThreadActivity(Thread[] threads){
+        Intent intent = new Intent(context,ThreadListActivity.class);
+        intent.putExtra("threads", threads);
+        context.startActivity(intent);
     }
 }
