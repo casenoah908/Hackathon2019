@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     int accountsCount = 3;
     UserAccount[] accounts = hardcodeAccounts();
+    UserAccount passedAccount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
         //instantiate views
         Button loginButton = findViewById(R.id.loginButton);
+
+
+
         final TextView username = findViewById(R.id.usernameBox);
         final TextView password = findViewById(R.id.passwordBox);
 
@@ -77,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     //if user logging in is in the accounts...
                     if((account.getUsername().equals(currentUsername))&&(account.getPassword().equals(currentPassword))){
                         //start home activity
+                        passedAccount = account;
                         openHomeActivity();
                     }else{
                         Toast.makeText(MainActivity.this,"NOPE",Toast.LENGTH_LONG);
@@ -84,17 +89,24 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+
     }
         public UserAccount[] hardcodeAccounts () {
-            UserAccount account1 = new UserAccount("NoahCase","12345");
-            UserAccount account2 = new UserAccount("NoahSchottler","54321");
-            UserAccount account3 = new UserAccount("TrevorSchmidt","15243");
+            UserAccount account1 = new UserAccount("NoahCase","12345",25);
+            UserAccount account2 = new UserAccount("NoahSchottler","54321",52);
+            UserAccount account3 = new UserAccount("TrevorSchmidt","15243",252);
             UserAccount[] accounts = {account1, account2, account3};
             return accounts;
         }
+
         public void openHomeActivity(){
             Intent intent = new Intent(this,HomeActivity.class);
+            intent.putExtra("user", passedAccount);
             startActivity(intent);
         }
+
+
 
 }

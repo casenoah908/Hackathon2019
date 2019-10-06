@@ -3,4 +3,5 @@
     <string name="username">Username</string>
     <string name="button">Button</string>
     <string name="password">Password</string>
+    <string name="title_type">Title - Type</string>
 </resources>
