@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
         //instantiate views
         Button loginButton = findViewById(R.id.loginButton);
+
+
+
         final TextView username = findViewById(R.id.usernameBox);
         final TextView password = findViewById(R.id.passwordBox);
 
@@ -86,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+
     }
         public UserAccount[] hardcodeAccounts () {
             UserAccount account1 = new UserAccount("NoahCase","12345",25);
@@ -94,10 +100,13 @@ public class MainActivity extends AppCompatActivity {
             UserAccount[] accounts = {account1, account2, account3};
             return accounts;
         }
+
         public void openHomeActivity(){
             Intent intent = new Intent(this,HomeActivity.class);
             intent.putExtra("user", passedAccount);
             startActivity(intent);
         }
+
+
 
 }
