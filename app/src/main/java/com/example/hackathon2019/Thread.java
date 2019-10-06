@@ -1,6 +1,8 @@
 package com.example.hackathon2019;
 
-public class Thread {
+import java.io.Serializable;
+
+public class Thread implements Serializable {
 
     private String title;
     private String type;

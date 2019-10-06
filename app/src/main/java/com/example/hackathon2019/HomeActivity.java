@@ -17,13 +17,13 @@ public class HomeActivity extends AppCompatActivity {
         UserAccount account2 = new UserAccount("NoahSchottler","54321",52);
         UserAccount account3 = new UserAccount("TrevorSchmidt","15243",252);
 
-        Thread[] physical = new Thread[2];
-        Thread[] emotional = new Thread[2];
-        Thread[] intellectual = new Thread[2];
-        Thread[] social = new Thread[2];
-        Thread[] spiritual = new Thread[2];
-        Thread[] environmental = new Thread[2];
-        Thread[] occupational = new Thread[2];
+        final Thread[] physical = new Thread[2];
+        final Thread[] emotional = new Thread[2];
+        final Thread[] intellectual = new Thread[2];
+        final Thread[] social = new Thread[2];
+        final Thread[] spiritual = new Thread[2];
+        final Thread[] environmental = new Thread[2];
+        final Thread[] occupational = new Thread[2];
         
         //physical
         physical[0] =  new Thread("Workout Strategies", "discussion", "10/5/19", account1,
@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             //On Click of of "Emotional Wellness" Button
             public void onClick(View v){
-                openThreadListActivity();
+                openThreadListActivity(emotional);
             }
         });
         //Physical
@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             //On Click of of "Emotional Wellness" Button
             public void onClick(View v){
-                openThreadListActivity();
+                openThreadListActivity(physical);
             }
         });
         //Occupational
@@ -79,7 +79,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             //On Click of of "Emotional Wellness" Button
             public void onClick(View v){
-                openThreadListActivity();
+                openThreadListActivity(occupational);
             }
         });
         //Spiritual
@@ -87,7 +87,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             //On Click of of "Emotional Wellness" Button
             public void onClick(View v){
-                openThreadListActivity();
+                openThreadListActivity(spiritual);
             }
         });
         //Social
@@ -95,7 +95,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             //On Click of of "Emotional Wellness" Button
             public void onClick(View v){
-                openThreadListActivity();
+                openThreadListActivity(social);
             }
         });
         //Environmental
@@ -103,7 +103,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             //On Click of of "Emotional Wellness" Button
             public void onClick(View v){
-                openThreadListActivity();
+                openThreadListActivity(environmental);
             }
         });
         //Intellectual
@@ -111,13 +111,14 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             //On Click of of "Emotional Wellness" Button
             public void onClick(View v){
-                openThreadListActivity();
+                openThreadListActivity(intellectual);
             }
         });
     }
 
-    public void openThreadListActivity(){
-        Intent intent = new Intent(this,RecyclerViewAdapter.class);
+    public void openThreadListActivity(Thread[] threads){
+        Intent intent = new Intent(this,ThreadListActivity.class);
+        intent.putExtra("thread",threads);
         startActivity(intent);
     }
 
