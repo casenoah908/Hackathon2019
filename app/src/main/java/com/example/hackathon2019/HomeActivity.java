@@ -73,7 +73,7 @@ public class HomeActivity extends AppCompatActivity {
         String goal = bundle.getString("goal");
 
         TextView t = (TextView) findViewById(R.id.textView5);
-        t.setText("Welcome back " + name + " to day " + days + " of battling " + goal + ".");
+        t.setText("Welcome back " + name + " to day " + days + ".\n Recovery Goal: " + goal + "");
         //t.setTextAlignment(4);
 
         //Dimension of Wellness Buttons
