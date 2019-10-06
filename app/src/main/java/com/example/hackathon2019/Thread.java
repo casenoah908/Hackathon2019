@@ -6,12 +6,14 @@ public class Thread {
     private String type;
     private String dateTime;
     private UserAccount user;
+    private String description;
 
-    public Thread(String title, String type, String dateTime, UserAccount user){
+    public Thread(String title, String type, String dateTime, UserAccount user, String description){
         this.title = title;
         this.type = type;
         this.dateTime = dateTime;
         this.user = user;
+        this.description = description;
     }
 
     public String getTitle(){
@@ -28,6 +30,9 @@ public class Thread {
     }
     public int getUserDays(){
         return user.getDays();
+    }
+    public String getDescription(){
+        return description;
     }
 
 }
