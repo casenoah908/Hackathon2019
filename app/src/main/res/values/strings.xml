@@ -4,4 +4,6 @@
     <string name="button">Button</string>
     <string name="password">Password</string>
     <string name="title_type">Title - Type</string>
+    <string name="user_and_date">user and date</string>
+    <string name="description">description</string>
 </resources>
