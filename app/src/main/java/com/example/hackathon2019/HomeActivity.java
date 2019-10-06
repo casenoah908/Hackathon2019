@@ -12,6 +12,29 @@ import androidx.appcompat.app.AppCompatActivity;
 public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        UserAccount account1 = new UserAccount("NoahCase","12345",25);
+        UserAccount account2 = new UserAccount("NoahSchottler","54321",52);
+        UserAccount account3 = new UserAccount("TrevorSchmidt","15243",252);
+
+        Thread[] physical = new Thread[2];
+        Thread[] emotional = new Thread[2];
+        Thread[] intellectual = new Thread[2];
+        Thread[] social = new Thread[2];
+        Thread[] spiritual = new Thread[2];
+        Thread[] environmental = new Thread[2];
+        Thread[] occupational = new Thread[2];
+        
+        //physical
+        physical[0] =  new Thread("Workout Strategies", "discussion", "10/5/19", account1,
+                "Hey, \nI'm wondering if anyone has good ideas for how to workout. I'm wanting to start but honestly I'm a little intimidated by it. How should I ease myself into it?\nThanks");
+        physical[1] =  new Thread("Hi guys, I've been experiencing intense muscle tension and nauseousness, wondering how I should ", "discussion", "10/5/19", account2,
+                "Hey, \n I'm wondering if anyone has good ideas for how to workout. I am stupid and haven't worked out before. Please tell me how.");
+        //emotional
+        emotional[0] = new Thread("Workout Strategies", "discussion", "10/5/19", account1,
+                "Hey, I'm wondering if anyone has good ideas for how to workout. I am stupid and haven't worked out before. Please tell me how.");
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
@@ -97,5 +120,7 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this,RecyclerViewAdapter.class);
         startActivity(intent);
     }
+
+
 
 }
