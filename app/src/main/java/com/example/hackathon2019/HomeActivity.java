@@ -14,7 +14,11 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-
+        //Getting information about the user from the bundle
+        Bundle bundle = getIntent().getExtras();
+        int days = bundle.getInt("days");
+        String password = bundle.getString("password");
+        String name = bundle.getString("name");
 
         //Dimension of Wellness Buttons
         Button buttonPhysical = findViewById(R.id.buttonPhysical);
@@ -24,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
         Button buttonSocial = findViewById(R.id.buttonSocial);
         Button buttonEnviormental = findViewById(R.id.buttonEnviormental);
         Button buttonIntellectual = findViewById(R.id.buttonIntellectual);
+
 
         //Listeners that open ThreadListActivities
         //Emotional

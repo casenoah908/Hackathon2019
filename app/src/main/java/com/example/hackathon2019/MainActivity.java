@@ -28,12 +28,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //wassup
-        //My wassup
-        //Schottler did this
-
-        //instantiate objects
-
 
         //instantiate views
         Button loginButton = findViewById(R.id.loginButton);
@@ -104,6 +98,11 @@ public class MainActivity extends AppCompatActivity {
         public void openHomeActivity(){
             Intent intent = new Intent(this,HomeActivity.class);
             intent.putExtra("user", passedAccount);
+            Bundle bundle = new Bundle();
+            bundle.putInt("days",passedAccount.getDays());
+            bundle.putString("username",passedAccount.getUsername());
+            bundle.putString("password",passedAccount.getPassword());
+            intent.putExtras(bundle);
             startActivity(intent);
         }
 
