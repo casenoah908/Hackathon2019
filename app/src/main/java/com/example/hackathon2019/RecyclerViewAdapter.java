@@ -27,11 +27,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
 
-    public RecyclerViewAdapter(ArrayList<String> titles, ArrayList<String> types, ArrayList<UserAccount> users, ArrayList<String> dates){
-        this.titles = titles;
-        this.types = types;
-        this.users = users;
-        this.dates = dates;
+    public RecyclerViewAdapter(Thread[] dimensionThreads){
+
     }
 
     @Override
