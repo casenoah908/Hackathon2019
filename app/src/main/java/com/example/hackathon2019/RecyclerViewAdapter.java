@@ -37,17 +37,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerViewAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerViewAdapter.ViewHolder holder, final int position) {
         //set info
         holder.threadTitleAndType.setText(dimensionThreads[position].getType()+" - "+dimensionThreads[position].getTitle());
+        holder.threadTitleAndType.setSelected(true);
         holder.threadUserAndDate.setText(dimensionThreads[position].getUserName()+" "+
-                dimensionThreads[position].getUserDays()+" days sober"+" - "+dimensionThreads[position].getDateTime());
+                dimensionThreads[position].getUserDays()+" days"+" - "+dimensionThreads[position].getDateTime());
 
         holder.threadItemLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //open thread activity
-                //openThreadActivity();
+                openThreadActivity(dimensionThreads[position]);
             }
         });
     }
@@ -69,9 +70,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
-    public void openThreadActivity(Thread[] threads){
-        Intent intent = new Intent(context,ThreadListActivity.class);
-        intent.putExtra("threads", threads);
+    public void openThreadActivity(Thread thread){
+        Intent intent = new Intent(context,ThreadActivity.class);
+        intent.putExtra("thread",thread);
         context.startActivity(intent);
     }
 }

@@ -12,8 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".thread_activity"></activity>
-        <activity android:name=".ThreadListActivity"></activity>
+        <activity android:name=".ThreadActivity"></activity>
+        <activity android:name=".ThreadListActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
