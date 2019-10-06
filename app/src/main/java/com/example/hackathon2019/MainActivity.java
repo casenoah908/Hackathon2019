@@ -105,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this,HomeActivity.class);
             intent.putExtra("user", passedAccount);
             startActivity(intent);
+
+            int[] array = new int[2];
+            array[0] = 3;
         }
 
 
