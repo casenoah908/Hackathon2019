@@ -1,6 +1,6 @@
 # Hackathon2019
 
-  Hackathon was a competitive coding event held by Emerging Prarie, where participants would develop an application in teams within less than 24 hours. 
+    Hackathon was a competitive coding event held by Emerging Prarie, where participants would develop an application in teams within less than 24 hours. 
 Since I had recently learned to use Android Studio about a month prior by working on my FargoEventBoard project (see repository), I figured I could teach 
 my team (Me/Noah Case, Trevor Schmidt, and Noah Schottler) to use Android Studio as well. Hackathon 2019's project theme was to create an app involving mental 
 and behavioral health. The actual relation to the subject was left quite broad so we could take our project in many directions. My team decided to create the 
